@@ -6,16 +6,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int n = 10;
-            int[] array = { 3, 9, 15, 25, 7, 33, 17, 85, 12, 49 };
+            int n = 23;
+            Random rnd = new Random();
+            int[] array = new int[23];
             int count = 0;
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i <= n; i++)
             {
+                array[i] = rnd.Next(160, 190);
                 count += array[i];
-                Console.WriteLine($"{i + 1} Груз={array[i]}");
+                Console.WriteLine($"{i + 1} Студент={array[i]}");  
             }
-            Console.WriteLine();
-            Console.WriteLine($"Общая масса груза={count}");
+            Console.WriteLine($"Средний рост={count / n}");
             Console.Read();
         }
     }
